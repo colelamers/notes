@@ -1,6 +1,26 @@
 # Builds debug
 dotnet build
 
+# Setup VSCode Debugger
+* Extensions, C# Dev Kit, C#
+1. Create a folder, .vscode, at the root of the project (same dir as .csproj file)
+2. Add a file, launch.json
+3. Add this json
+{
+    "configurations": [
+        {
+            "name": ".NET Launch",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/Debug/net9.0/FPS Counter.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false
+        }
+    ]
+}
+4. Change the program to point at the debug build .dll file.
+
 # Builds release
 dotenet build --configuration Release
 
