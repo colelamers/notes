@@ -156,6 +156,9 @@ dotnet new avalonia.mvvm -n MyApp
 # Build a new folder object
 dotnet new avalonia.mvvm -o MyApp
 
+# Build with 1 core (preventing multi-core crashing)
+dotnet build -m:1 -c Debug
+
 # === Create Views ===
 dotnet new avalonia.window -n MainWindow -o Views
 dotnet new avalonia.usercontrol -n KUserControl -o Views
