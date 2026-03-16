@@ -44,6 +44,9 @@ etc.
 # Add References
 dotnet add reference ../CommonLibrary/CommonLibrary.csproj
 
+# Add a solution
+dotnet new sln -n lib -f slnx 
+
 # Add Project to solution
 dotnet sln add CommonLibrary.Tests/CommonLibrary.Tests.csproj
 
